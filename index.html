@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Copiar texto</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+    button {
+      padding: 15px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="copiar()">📋 Copiar texto</button>
+
+  <script>
+    function copiar() {
+      navigator.clipboard.writeText("Esse é o texto que será copiado!")
+        .then(() => alert("✅ Texto copiado!"))
+        .catch(err => alert("❌ Erro ao copiar: " + err));
+    }
+  </script>
+</body>
+</html>
