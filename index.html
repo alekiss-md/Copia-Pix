@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Copiar texto</title>
+  <title>Copiar PIX</title>
   <style>
     body {
       display: flex;
@@ -27,12 +27,14 @@
   </style>
 </head>
 <body>
-  <button onclick="copiar()">📋 Copiar texto</button>
+  <button onclick="copiar()">📋 Copiar PIX</button>
 
   <script>
     function copiar() {
-      navigator.clipboard.writeText("Esse é o texto que será copiado!")
-        .then(() => alert("✅ Texto copiado!"))
+      const texto = "00020126580014br.gov.bcb.pix013663d0cbca-6d12-493a-a3a6-9939c3d4b93e5204000053039865802BR5925Carlos Alex Almeida Silva60085500041862070503***6304E63B";
+      
+      navigator.clipboard.writeText(texto)
+        .then(() => alert("✅ PIX copiado para a área de transferência!"))
         .catch(err => alert("❌ Erro ao copiar: " + err));
     }
   </script>
